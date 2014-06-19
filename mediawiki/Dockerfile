@@ -16,9 +16,9 @@ add	./fpm-pool-www.conf /etc/php5/fpm/pool.d/www.conf
 
 # Install mediawiki
 run	mkdir /src
-add	http://download.wikimedia.org/mediawiki/1.21/mediawiki-1.21.2.tar.gz /src/mediawiki.tgz
+add https://releases.wikimedia.org/mediawiki/1.23/mediawiki-1.23.0.tar.gz /src/mediawiki.tgz
 run	cd /src && tar zxf mediawiki.tgz
-run	ln -snf /src/mediawiki-1.21.2 /src/mediawiki
+run	ln -snf /src/mediawiki-1.23.0 /src/mediawiki
 run	chown -R www-data:www-data /src/mediawiki/
 
 # Add data directory and symlinks that can then be used as a data volume
